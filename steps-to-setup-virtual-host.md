@@ -1,13 +1,13 @@
-1) Create a User
+### 1) Create a User
 sudo adduser --home <path> --gid 100 <User-name>
 e.g.
 sudo adduser --home /var/www/trmt.ebslab.com --gid 100 trmt
 Enter password : kowtavdu
 
-2) Create a subdomain to godady
+### 2) Create a subdomain to godady
 trmt.ebslab.com
 
-3) Configure Virtual Host
+### 3) Configure Virtual Host
 
 cd /etc/apache2/sites-available/
 cp 000-default.conf subdomain.website.conf
@@ -25,7 +25,7 @@ sudo systemctl restart apache2
 Note: a2dissite disables a site by removing those symlinks
 
 check in browser
-4) Setup index page
+### 4) Setup index page
 sudo su --login <user-name>
 e.g.
 sudo su --login trmt
